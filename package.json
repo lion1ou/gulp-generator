@@ -1,0 +1,32 @@
+{
+  "name": "gulp-generator",
+  "version": "1.0.0",
+  "description": "前端工程化项目，gulp脚手架",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "lion1ou",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-collector": "^1.2.1",
+    "gulp-uglify": "^3.0.0",
+    "imagemin-pngquant": "^5.0.0",
+    "jshint": "^2.9.4"
+  }
+}
