@@ -5,7 +5,7 @@
 
 ## 使用
 
-* git clone 
+* git clone https://github.com/lion1ou/gulp-generator.git
 * npm install
 * npm run dev     # 开发模式（不压缩）
 * npm run build   # 发布模式（压缩）

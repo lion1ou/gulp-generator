@@ -55,6 +55,7 @@ gulp.task('dev:styles', function() {
     return gulp.src(devPath.cssSrc)
         .pipe(less()) //编译less
         .pipe(autoprefixer('iOS >= 7', 'Android >= 4.1')) //自动添加css头
+        .pipe(concat('main.css')) //合并css
         .pipe(gulp.dest(devPath.otherDist)) // 重新加载页面
         .pipe(browserSync.reload({ stream: true }));
 });
@@ -70,6 +71,7 @@ gulp.task('dev:js', function() {
     return gulp.src(devPath.jsSrc)
         .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('default'))
+        .pipe(concat('main.js')) //合并css
         .pipe(gulp.dest(devPath.otherDist))
         .pipe(browserSync.reload({ stream: true }));
 });
@@ -103,8 +105,8 @@ gulp.task('build:html', function() {
 // 压缩css
 gulp.task('build:styles', function() {
     return gulp.src(distPath.cssSrc)
-        .pipe(concat('main.css')) //合并css
-        .pipe(minifycss()) //压缩css
+
+    .pipe(minifycss()) //压缩css
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(distPath.cssDist));
 });
